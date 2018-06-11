@@ -1,7 +1,8 @@
 var request = require('request');
 
+//ignore
 module.exports= {
-    callapi: function (query) {
+    callapi: function (query, result) {
 
         var options = {
             url: "https://trackapi.nutritionix.com/v2/search/instant?query=" + encodeURIComponent(query),
@@ -16,9 +17,11 @@ module.exports= {
         function callback(error, response, body) {
             if (!error && response.statusCode == 200) {
 
-                //var info = JSON.parse(body);
-                response=JSON.parse(body);
-                console.log(response);
+                var info = JSON.parse(body);
+                console.log(info);
+                return(info);
+
+
 
 
             }
