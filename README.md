@@ -12,3 +12,18 @@ Run
 ```
 npm start
 ```
+
+API Localhost:3000
+
+POST /food Request
+
+Header:
+```
+'Content-Type' : 'application/json'
+```
+Body (JSON):
+```
+{"query":"theFoodImLookingFor"}
+```
+
+POST /food Response
